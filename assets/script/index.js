@@ -119,7 +119,8 @@ function getCookies() {
 
   selectedCookies.forEach(cookie => {
     document.cookie = `${cookie}; path=/; max-age=${life}; SameSite=Lax`;
-  });
+  });   //idk why the cookies are not being deleted, I asked chatGPT and it
+        // said that this should work and its not
 
   setCookies(selectedCookies);
 }
